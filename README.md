@@ -7,7 +7,7 @@ Predicts 8760-hour heating, cooling, electricity, and DHW demand profiles for Sw
 
 ## Demo
 
-![Demo](demo.gif)
+![Demo](https://raw.githubusercontent.com/urban-sympheny/decarbAI-demands/main/demo.gif)
 
 ## Install
 
