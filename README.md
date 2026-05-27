@@ -1,5 +1,5 @@
-[![PyPI - Version](https://img.shields.io/pypi/v/decarbai-demands.svg)](https://pypi.org/project/decarbai-demands)
-[![PyPI - Python Version](https://img.shields.io/pypi/pyversions/decarbai-demands.svg)](https://pypi.org/project/decarbai-demands)
+[![PyPI - Version](https://img.shields.io/pypi/v/decarbai-demands.svg?cacheSeconds=300)](https://pypi.org/project/decarbai-demands)
+[![PyPI - Python Version](https://img.shields.io/pypi/pyversions/decarbai-demands.svg?cacheSeconds=300)](https://pypi.org/project/decarbai-demands)
 
 # DecarbAI Demands
 
