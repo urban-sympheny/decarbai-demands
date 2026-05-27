@@ -1,0 +1,13 @@
+# To install and run with every commit (just once)
+#   pre-commit install
+# Apply to all files without committing:
+#   pre-commit run --all-files
+# Update this file:
+#   pre-commit autoupdate
+repos:
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: v0.15.14
+    hooks:
+      - id: ruff
+        args: [--fix]
+      - id: ruff-format

@@ -1,0 +1,118 @@
+[build-system]
+requires = ["uv_build>=0.11.6,<0.12"]
+build-backend = "uv_build"
+
+
+[project]
+name = "decarbai-demands"
+version = "3.11"
+description = "A dash application for generating energy demand profiles using machine learning models."
+readme = "README.md"
+requires-python = ">=3.11,<4"
+license = "Apache-2.0"
+keywords = [
+  "sympheny",
+  "energy",
+  "optimization",
+  "urban-planning",
+  "sustainability",
+  "machine-learning",
+]
+classifiers = [
+  "Development Status :: 5 - Production/Stable",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Operating System :: OS Independent",
+  "Programming Language :: Python :: Implementation :: CPython",
+]
+
+dependencies = [
+  "dash>=4.1.0",
+  "numpy>=2.4.6",
+  "plotly>=6.7.0",
+  "pydantic>=2.13.4",
+  "scikit-learn>=1.8.0",
+  "xgboost>=3.2.0",
+  "zstandard>=0.25.0",
+]
+
+[dependency-groups]
+dev = ["ruff>=0.15.4", "mypy>=1.5.1", "pre-commit>=4.6.0"]
+
+
+[project.scripts]
+decarbai-demands = "decarbai_demands.cli:main"
+
+[project.urls]
+Homepage = "https://www.sympheny.com"
+Repository = "https://github.com/urban-sympheny/decarbAI-demands.git"
+Issues = "https://github.com/urban-sympheny/decarbAI-demands/issues"
+
+
+# ──────────────────────────────────────────────
+# RUFF
+# ──────────────────────────────────────────────
+[tool.ruff]
+target-version = "py311"
+line-length = 150
+
+[tool.ruff.lint]
+select = [
+  "E",   # pycodestyle errors
+  "W",   # pycodestyle warnings
+  "F",   # pyflakes
+  "B",   # flake8-bugbear
+  "I",   # isort
+  "UP",  # pyupgrade
+  "S",   # flake8-bandit (security)
+  "C4",  # flake8-comprehensions
+  "C90", # mccabe complexity
+  "SIM", # flake8-simplify
+  "TC",  # flake8-type-checking
+  "RUF", # Ruff-specific rules
+  "PT",  # flake8-pytest-style
+]
+
+ignore = [
+  "B008",   # Function calls in default args (FastAPI Depends, etc.)
+  "E741",   # Ambiguous variable names (e.g., l, O, I)
+  "SIM112", # Check for environment variables that are not capitalized.
+  "C416",   # Checks for unnecessary dict, list, and set comprehension.
+  "B905",   # zip() without strict=
+  "S104",   # hardcoded-bind-all-interfaces
+]
+
+
+[tool.ruff.lint.per-file-ignores]
+"tests/*" = ["S101"] # Allow assert in tests
+
+[tool.ruff.lint.mccabe]
+max-complexity = 10
+
+[tool.ruff.lint.isort]
+combine-as-imports = true
+force-single-line = false
+lines-after-imports = 2
+known-first-party = ["decarbai_demands"]
+
+
+# ──────────────────────────────────────────────
+# MYPY
+# ──────────────────────────────────────────────
+[tool.mypy]
+plugins = ["pydantic.mypy"]
+disallow_untyped_defs = true
+show_error_codes = true
+check_untyped_defs = true
+no_implicit_reexport = true
+strict_equality = true
+warn_unused_ignores = true
+warn_return_any = true
+warn_redundant_casts = true
+
+
+[[tool.mypy.overrides]]
+module = ["plotly.*"]
+ignore_missing_imports = true
