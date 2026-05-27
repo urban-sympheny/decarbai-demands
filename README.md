@@ -5,6 +5,10 @@
 
 Predicts 8760-hour heating, cooling, electricity, and DHW demand profiles for Swiss buildings using a per-city, per-building-type XGBoost + PCA ensemble, served through an interactive Dash dashboard.
 
+## Demo
+
+![Demo](demo.gif)
+
 ## Install
 
 ```bash
