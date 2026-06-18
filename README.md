@@ -90,3 +90,12 @@ Predictions are most reliable when inputs lie within the ranges the model was tr
 | Relative Compactness [-]   | 0.65  | 1.0    |
 | Characteristic Length [m]  | 0.71  | 2.56   |
 | Average WWR [-]            | 0.0   | 0.75   |
+
+## Credits
+
+This tool was developed under the **Innosuisse DecarbAI project**, a UK/CH bilateral research collaboration.
+
+- **ML models & methodology** — Dr. Hassan Bazazzadeh & Dr. Georgios Mavromatidis ([Urban Energy Systems Laboratory, Empa](https://www.empa.ch/web/s313))
+- **Building stock data & simulation inputs** — [BuildingAtlas](https://www.buildingatlas.io), providing a scientifically grounded, data-rich foundation for Swiss and European building typologies
+- **ML deployment & dashboard** — Youssef Sherif & Sympheny's Team ([Sympheny](https://www.sympheny.com))
+- **Funding** — [Innosuisse](https://www.innosuisse.ch) UK/CH bilateral grant

@@ -5,7 +5,7 @@ build-backend = "uv_build"
 
 [project]
 name = "decarbai-demands"
-version = "1.0.3"
+version = "1.0.4"
 description = "A dash application for generating energy demand profiles using machine learning models."
 readme = "README.md"
 requires-python = ">=3.11,<4"
